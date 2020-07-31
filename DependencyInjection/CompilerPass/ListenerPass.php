@@ -45,7 +45,7 @@ class ListenerPass implements CompilerPassInterface
 
         foreach ($deferredEvents as $event) {
             $sfDispatcherDef->addMethodCall(
-                'addListenerService', [
+                'addListener', [
                     $event,
                     ['fervo_deferred_event.listener', 'onNonDeferEvent'],
                     -127,
